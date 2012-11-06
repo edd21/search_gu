@@ -1,10 +1,11 @@
 #! /bin/bash
 
+var=${1:?"Se necesita un grupo"}
 
 
-var=$(egrep '^$1' /etc/group)
+var=$(egrep '^$var' /etc/group)
 if [[ $var ]]; then
-    echo "El grupo existe: "$1
+    echo -e "El grupo existe: $1 \n :P"
 else
-   echo "El grupo no existe: "$1
+   echo -e  "El grupo no existe: $1 \n X_X"
 fi
